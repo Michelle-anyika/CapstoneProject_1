@@ -16,9 +16,8 @@ public class Main {
         EnrollmentDAO enrollmentDAO = new EnrollmentDAO();
 
         while (true) {
-            System.out.println("======================================");
             System.out.println("   UNIVERSITY MANAGEMENT SYSTEM");
-            System.out.println("======================================");
+            
             System.out.println("1. Manage Students");
             System.out.println("2. Manage Courses");
             System.out.println("3. Enroll Students");
@@ -45,10 +44,10 @@ public class Main {
         }
     }
 
-    // ---------------- STUDENT MENU ----------------
+    // STUDENT MENU 
     private static void studentMenu(Scanner sc, StudentDAO studentDAO) {
         while (true) {
-            System.out.println("\n------ STUDENT MANAGEMENT ------");
+            System.out.println("\n STUDENT MANAGEMENT ");
             System.out.println("1. Add Student");
             System.out.println("2. View Students");
             System.out.println("3. Update Student");
@@ -137,10 +136,10 @@ public class Main {
         }
     }
 
-    // ---------------- COURSE MENU ----------------
+    //  COURSE MENU 
     private static void courseMenu(Scanner sc, CourseDAO courseDAO) {
         while (true) {
-            System.out.println("\n------ COURSE MANAGEMENT ------");
+            System.out.println("\n COURSE MANAGEMENT ");
             System.out.println("1. Add Course");
             System.out.println("2. View Courses");
             System.out.println("3. Update Course");
@@ -164,7 +163,7 @@ public class Main {
                 }
                 case 2 -> {
                     List<Course> courses = courseDAO.getAllCourses();
-                    System.out.println("\n--- All Courses ---");
+                    System.out.println("\n All Courses ");
                     courses.forEach(System.out::println);
                 }
                 case 3 -> {
@@ -188,10 +187,10 @@ public class Main {
         }
     }
 
-    // ---------------- ENROLLMENT MENU ----------------
+    //  ENROLLMENT MENU 
     private static void enrollmentMenu(Scanner sc, EnrollmentDAO enrollmentDAO) {
         while (true) {
-            System.out.println("\n------ ENROLLMENT MANAGEMENT ------");
+            System.out.println("\n ENROLLMENT MANAGEMENT ");
             System.out.println("1. Enroll a Student");
             System.out.println("2. View Enrollments");
             System.out.println("3. Back to Main Menu");
@@ -215,9 +214,9 @@ public class Main {
         }
     }
 
-    // ---------------- REPORTS ----------------
+    //  REPORTS 
     private static void viewReports(EnrollmentDAO enrollmentDAO) {
-        System.out.println("\n------ UNIVERSITY REPORTS ------");
+        System.out.println("\n UNIVERSITY REPORTS ");
         enrollmentDAO.viewEnrollments();
         System.out.println("-------------------------------");
     }
