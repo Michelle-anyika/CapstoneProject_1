@@ -4,8 +4,8 @@ package org.example;
 public class GraduateStudent extends Student {
     private double totalScore; // total out of 100
 
-    public GraduateStudent(int id, String name, double totalScore) {
-        super(id, name);
+    public GraduateStudent(int id, String name, String email, double totalScore) {
+        super(id, name, email);
         this.totalScore = totalScore;
     }
 
@@ -17,6 +17,6 @@ public class GraduateStudent extends Student {
 
     @Override
     public String toString() {
-        return super.toString() + ", GPA=" + calculateGPA();
+        return super.toString() + ", GPA=" + String.format("%.2f", calculateGPA());
     }
 }
